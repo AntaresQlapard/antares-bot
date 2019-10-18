@@ -14,4 +14,4 @@ async def on_ready():
 @bot.command()
 async def hi():
 	await bot.say('Hello There!')
-bot.run('NTMwMzcyOTg0OTkzNzQyODUw.XamLLg.wOjDV_0s4NzGprEgP6nou9-1890')
+bot.run('')
