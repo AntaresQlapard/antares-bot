@@ -1,17 +1,16 @@
-import discord
-from discord.ext import commands
-import asyncio
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-bot = commands.Bot(command_prefix='#')
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
-@bot.event
-async def on_ready():
-	print('The bot is ready!')
-	print(bot.user.bot)
-	print(bot.user.id)
-	print('------')
-	
-@bot.command()
-async def hi():
-	await bot.say('Hello There!')
-bot.run('')
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
+
